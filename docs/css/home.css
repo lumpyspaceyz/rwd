@@ -1,3 +1,34 @@
+/* 홍보영상 */
+.youtube {
+  & iframe {
+    aspect-ratio: 16/9;
+  }
+}
+
+/* 뉴스 */
+.news {
+  background-color: var(--primary-blue-1);
+  color: #fff;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr 1fr;
+}
+
+.news-headline {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1; /* 15px */
+  letter-spacing: -0.3px;
+  text-transform: uppercase;
+}
+
+.news-list {
+  font-size: 12px;
+  line-height: 1.5; /* 18px */
+  letter-spacing: -0.24px;
+}
+
 @media (min-width: 768px) {
   .inform {
     background: var(--grayscale-snow);
@@ -20,16 +51,15 @@
 
   .youtube {
     grid-area: youtube;
-    background: yellow;
+    display: block;
+    align-self: center;
   }
 
   .notice {
     grid-area: notice;
-    background: pink;
   }
 
   .news {
     grid-area: news;
-    background: lime;
   }
 }

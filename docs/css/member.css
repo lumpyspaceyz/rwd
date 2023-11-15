@@ -84,15 +84,79 @@
 }
 
 .is--invalid {
-  background: url(./../images/icon-warning.svg) no-repeat 100% 80%;
+  background: url(/images/icon-warning.svg) no-repeat 100% 80%;
   background-size: 16px 16px;
 }
 
 .is--valid {
-  background: url(./../images/icon-checked.svg) no-repeat 100% 80%;
+  background: url(/images/icon-checked.svg) no-repeat 100% 80%;
   background-size: 16px 16px;
 }
 
 .is--invalid .form-message {
   display: block;
+}
+
+.member-password .button-password {
+  background-image: url(/images/icon-visible.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  position: absolute;
+  right: 24px;
+  bottom: 6px;
+  width: 16px;
+  height: 16px;
+  border: 0;
+  padding: 0;
+}
+
+.member-password .button-password.is--toggle {
+  background-image: url(/images/icon-invisible.svg);
+}
+
+.save-email {
+  margin-top: 40px;
+  font-size: 12px;
+  line-height: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  position: relative;
+}
+
+.custom-checkbox {
+  width: 16px;
+  height: 16px;
+  background: url(/images/icon-unchecked-square.svg) no-repeat 50% 50% / cover;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2px;
+  pointer-events: none;
+}
+
+.form-checkbox {
+  appearance: none;
+  width: 12px;
+  height: 12px;
+}
+
+.form-checkbox-label {
+  user-select: none;
+  cursor: pointer;
+  font-size: 12px;
+  padding-left: 4px;
+}
+
+.form-checkbox:checked + label .custom-checkbox {
+  background-image: url("/images/icon-checked-square.svg");
+}
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  border-radius: 2px;
+  box-shadow: 0 0 0 4px rgba(40, 70, 284, 0.9);
 }

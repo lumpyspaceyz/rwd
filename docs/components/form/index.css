@@ -69,7 +69,6 @@
 
 .form-input-input:invalid + label + span + .feedback {
   display: block;
-  background: pink;
   position: absolute;
   bottom: -24px;
   left: 0;

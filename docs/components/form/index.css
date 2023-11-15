@@ -4,4 +4,58 @@
   flex-flow: column nowrap;
   row-gap: 1rem;
   padding: 2rem;
+  width: 600px;
+}
+
+.form-input {
+  background: yellow;
+  position: relative;
+}
+
+.form-input-input {
+  width: 100%;
+  height: 48px;
+  padding: 6px 10px 4px;
+  border: 0;
+  border-bottom: 1px solid #000;
+}
+
+.form-input-label {
+  color: #000;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.36px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transition: all 300ms;
+}
+
+.form-input-input:focus + label,
+.form-input-input:focus:invalid + label {
+  font-size: 12px;
+  transform: translateY(-180%);
+}
+
+.feedback {
+  display: none;
+}
+
+.form-input-input:focus:valid + label + .icon-feedback {
+  background-color: lime;
+  width: 16px;
+  height: 16px;
+  border: 1px solid red;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.form-input-input:invalid + label + span + .feedback {
+  display: block;
+  background: pink;
+  position: absolute;
+  bottom: -24px;
+  left: 0;
 }

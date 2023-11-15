@@ -7,12 +7,9 @@
 }
 
 /* 신메뉴 컨테이너 */
-.new-menu {
-  background: var(--scondary-light-blue-1);
-  padding: 40px 0 20px;
-}
-
 .new-menu-text {
+  padding: 40px 1em 20px;
+  background: var(--scondary-light-blue-1);
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -41,11 +38,8 @@
 
 /* 데스크탑 */
 @media (min-width: 768px) {
-  .new-menu {
-    padding: 50px 0;
-  }
-
   .new-menu-text {
+    padding: 50px 0;
     row-gap: 30px;
   }
 
@@ -72,14 +66,14 @@
 
 /* 메뉴 보기 링크 */
 .go-menu {
-  border: 1px solid currentColor;
   padding: 8px 24px;
   color: #24388d;
+  border: 1px solid currentColor;
   font-size: 14px;
   font-weight: 700;
   line-height: 1.1; /* 15.4px */
-  position: relative;
-  z-index: 10;
+  /* position: relative;
+  z-index: 10; */
 }
 
 /* 이디야 음료 이미지 */
@@ -103,19 +97,17 @@
 }
 
 .new-menu-list {
-  /* border: 1px solid blue; */
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
+  pointer-events: none;
 }
 
 .beverage {
-  /* background: yellow; */
   position: relative;
 }
 
 .beverage-name {
-  /* border: 1px solid red; */
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-end;
@@ -139,6 +131,10 @@
 
 /* 모바일 */
 @media (max-width: 768px) {
+  .new-menu-list {
+    transform: translateY(-50px);
+    padding: 0 1em;
+  }
   .beverage-cheese {
     display: none;
   }
@@ -147,10 +143,10 @@
 /* 데스크탑 */
 @media (min-width: 768px) {
   .new-menu-list {
-    /* background: pink; */
     width: clamp(740px, 93%, 900px);
     margin: 0 auto;
     justify-content: space-between;
+    transform: translateY(-100px);
   }
 
   .beverage-cheese {

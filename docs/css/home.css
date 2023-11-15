@@ -12,12 +12,13 @@
 /* 공지사항 */
 .notice {
   display: grid;
-  grid-template-columns: 125px 1fr;
+  grid-template-columns: 100px 1fr;
   grid-template-areas:
     "notice-headline notice-article"
     "notice-button notice-article";
   background-color: var(--primary-blue-1);
-  background: linear-gradient(137deg, #263d83 3.86%, #102457 100%);
+  /* background: linear-gradient(137deg, #263d83 3.86%, #102457 100%); */
+  background: repeating-radial-gradient(#263d83, #102457 20%);
 }
 
 .notice-headline {
@@ -75,7 +76,7 @@
   text-transform: uppercase;
   padding: 1.25em;
   display: grid;
-  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 4.85em;
   grid-template-areas:
     "news-headline news-more"
     "news-list news-list";
@@ -108,10 +109,10 @@
   & a {
     /* flex-grow: 1;
     overflow: hidden; */
-    /* overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis; */
     width: calc(100% - 5.65em);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 
   & time {
@@ -137,8 +138,7 @@
 
   .inform-inner {
     display: grid;
-    /* grid-template-columns: 365px 375px; */
-    grid-template-columns: 378px 375px;
+    grid-template-columns: 410px 355px;
     grid-template-areas:
       "youtube notice"
       "youtube news";
